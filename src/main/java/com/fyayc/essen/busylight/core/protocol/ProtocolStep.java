@@ -3,14 +3,15 @@ package com.fyayc.essen.busylight.core.protocol;
 import com.fyayc.essen.busylight.core.protocol.SpecConstants.Light;
 import com.fyayc.essen.busylight.core.protocol.bytes.StepByte;
 import com.google.common.base.MoreObjects;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.stream.Stream;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 /** a protocol step */
 public class ProtocolStep {
   public static final int BYTE_LENGTH = 8;
-  protected static final Logger logger = LogManager.getLogger(ProtocolStep.class);
+  protected static final Logger logger = LoggerFactory.getLogger(ProtocolStep.class);
   private final StepByte[] stepBytes;
 
   public ProtocolStep(StepByte[] stepBytes) {

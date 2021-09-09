@@ -4,22 +4,23 @@ import com.fyayc.essen.busylight.core.protocol.ProtocolSpec;
 import com.fyayc.essen.busylight.core.protocol.SpecConstants;
 import com.fyayc.essen.busylight.core.protocol.SpecConstants.StandardSpecs;
 import com.tomgibara.bits.Bits;
-import java.io.Closeable;
-import java.util.Objects;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.hid4java.HidDevice;
 import org.hid4java.HidManager;
 import org.hid4java.HidServices;
 import org.hid4java.HidServicesListener;
 import org.hid4java.event.HidServicesEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.Closeable;
+import java.util.Objects;
 
 /**
  * the driver class for finding, connecting and communicating with the device
  */
 public class Driver implements Closeable {
 
-  protected static final Logger logger = LogManager.getLogger(Driver.class);
+  protected static final Logger logger = LoggerFactory.getLogger(Driver.class);
   protected static final int MAX_CONNECT_RETRIES = 5;
   private HidDevice physicalDevice = null;
   private KeepAliveThread keepAliveThread;
@@ -205,8 +206,7 @@ public class Driver implements Closeable {
   }
 
   private class KeepAliveThread extends Thread {
-
-    private final Logger logger = LogManager.getLogger(KeepAliveThread.class);
+    private final Logger logger = LoggerFactory.getLogger(KeepAliveThread.class);
     private final long keepAliveFreq;
     private boolean interrupt = false;
 

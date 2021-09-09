@@ -32,17 +32,25 @@
       <groupId>com.tomgibara.bits</groupId>
       <version>2.1.0</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
     <dependency>
-      <artifactId>log4j-core</artifactId>
-      <groupId>org.apache.logging.log4j</groupId>
-      <version>2.13.2</version>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.5</version>
     </dependency>
-    <dependency>
-      <artifactId>log4j-api</artifactId>
-      <groupId>org.apache.logging.log4j</groupId>
-      <version>2.11.2</version>
-    </dependency>
+
+    <!--    <dependency>-->
+<!--      <artifactId>log4j-core</artifactId>-->
+<!--      <groupId>org.apache.logging.log4j</groupId>-->
+<!--      <version>2.13.2</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <artifactId>log4j-api</artifactId>-->
+<!--      <groupId>org.apache.logging.log4j</groupId>-->
+<!--      <version>2.11.2</version>-->
+<!--    </dependency>-->
   </dependencies>
+
   <description>library for interacting with busylight</description>
   <groupId>com.fyayc.essen</groupId>
   <modelVersion>4.0.0</modelVersion>
