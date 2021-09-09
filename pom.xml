@@ -20,7 +20,7 @@
     <dependency>
       <artifactId>hid4java</artifactId>
       <groupId>org.hid4java</groupId>
-      <version>0.5.0</version>
+      <version>0.7.0</version>
     </dependency>
     <dependency>
       <artifactId>guava</artifactId>
