@@ -31,6 +31,7 @@ public class Driver implements Closeable {
     physicalDevice = hidServices.getAttachedHidDevices().stream()
         .filter(this::isCompatibleDevice)
         .peek(hidDevice -> {
+          logger.info("Device: {}", hidDevice);
           logger.info(
               "Found a compatible device {}: 0x{} / 0x{}",
               hidDevice.getProduct(),
