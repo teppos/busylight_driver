@@ -13,7 +13,7 @@ import java.util.Arrays;
  */
 public final class SpecConstants {
 
-  public static final short[] SUPPORTED_PRODUCT_IDS = new short[]{0x3BCA, 0x3BCB, 0x3BCC, 0x3BCD};
+  public static final int[] SUPPORTED_PRODUCT_IDS = new int[]{0x3BCA, 0x3BCB, 0x3BCC, 0x3BCD};
   public static final short SUPPORTED_VENDOR_ID = 0x27BB;
   private static double PULSE_GAP_TIME = 0.1;
 

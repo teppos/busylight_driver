@@ -102,8 +102,8 @@ public class Driver implements Closeable {
     return DriverHelper.INSTANCE;
   }
 
-  private boolean isValidProductId(short productId) {
-    for (short supportedProductId : SpecConstants.SUPPORTED_PRODUCT_IDS) {
+  private boolean isValidProductId(int productId) {
+    for (int supportedProductId : SpecConstants.SUPPORTED_PRODUCT_IDS) {
       if (productId == supportedProductId) {
         return true;
       }
